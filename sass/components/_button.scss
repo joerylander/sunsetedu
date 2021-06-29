@@ -1,0 +1,117 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all 0.2;
+    position: relative;
+    font-size: $font-size-medium;
+    font-weight: 500;
+    background-color: $color-button;
+    color: $color-grey-dark-1;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: $bp-smaller) {
+      font-size: $font-size-small;
+    }
+  }
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active,
+  &:focus {
+    outline: none;
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+}
+
+.slider__btn {
+  position: absolute;
+  top: 20%;
+
+  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  font-family: inherit;
+  color: $color-grey-dark-1;
+  z-index: 10;
+  border-radius: 50%;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 4rem;
+  cursor: pointer;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin: 0 2rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    font-size: 3.6rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: $font-size-larger;
+    top: 30%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: $font-size-large;
+    top: 30%;
+  }
+
+  &--left {
+    left: 4%;
+    transform: translate(-50%, -50%);
+  }
+
+  &--right {
+    right: 4%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.dots {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+
+  @media only screen and (max-width: $bp-small) {
+    opacity: 0;
+  }
+
+  &__dot {
+    border: none;
+    background-color: #858282;
+    opacity: 0.7;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    margin-right: 1.75rem;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &--active {
+      background-color: #000;
+      opacity: 1;
+    }
+  }
+}

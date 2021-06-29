@@ -1,0 +1,71 @@
+.footer {
+  grid-column: full-start / full-end;
+  background-color: $color-primary-dark;
+  font-family: $font-primary;
+  padding: 8rem;
+
+  &__links {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__copyright {
+    font-size: $font-size-medium;
+    font-weight: 400;
+    align-self: flex-end;
+
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: $font-size-smallest;
+    }
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__icon {
+    font-size: $font-size-medium;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 3rem;
+      height: 3rem;
+    }
+
+    &--wechat {
+      fill: #00ad19;
+    }
+
+    &--weibo {
+      fill: #e70e29;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    font-size: $font-size-medium;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-primary;
+  }
+}
+
+.footer span {
+  font-size: $font-size-medium;
+
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: $font-size-smallest;
+  }
+}

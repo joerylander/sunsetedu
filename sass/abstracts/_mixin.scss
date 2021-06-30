@@ -13,7 +13,7 @@ Breakpoiint argument choices::after
 
 1em = 16px
 */
-@mixin respond($breakpoint) {
+/* @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) {
       //600px
@@ -39,3 +39,4 @@ Breakpoiint argument choices::after
     }
   }
 }
+ */

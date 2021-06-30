@@ -52,10 +52,6 @@
   position: relative;
 
   overflow: hidden;
-
-  @media only screen and (max-width: $bp-smallest) {
-    overflow: visible;
-  }
 }
 
 .slide {
